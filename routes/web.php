@@ -26,3 +26,5 @@ Route::get('/masyarakat/form/', [App\Http\Controllers\HomeController::class, 'cr
 Route::get('/masyarakat/store/', [App\Http\Controllers\HomeController::class, 'store']);
 Route::get('/masyarakat/edit/{id}', [MasyarakatController::class, 'edit']);
 Route::put('/masyarakat/{id}', [MasyarakatController::class, 'update']);
+Route::delete('/masyarakat/{id}', [MasyarakatController::class, 'destroy']);
+

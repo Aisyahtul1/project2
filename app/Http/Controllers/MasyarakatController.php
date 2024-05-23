@@ -82,6 +82,9 @@ class MasyarakatController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $mas = Masyarakat::find($id);
+        $mas->delete();
+        return redirect('/masyarakat/');
+
     }
 }
