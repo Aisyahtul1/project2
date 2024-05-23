@@ -19,7 +19,7 @@ class MasyarakatController extends Controller
      */
     public function create()
     {
-        //
+        return view('masyarakat.form');
     }
 
     /**
