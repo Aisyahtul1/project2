@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Masyarakat;
+
 class MasyarakatController extends Controller
 {
     /**
@@ -27,7 +29,15 @@ class MasyarakatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $mas = new Masyarakat;
+        $mas->nik = $request->nik;
+        $mas->nama = $request->nama;
+        $mas->jenis_kelamin = $request->jenis_kelamin;
+        $mas->pekerjaan = $request->pekerjaan;
+        $mas->save();
+
+        return redirect('/masyarakat/');
+    
     }
 
     /**
