@@ -49,7 +49,7 @@
                     <td>{{$item->jenis_kelamin}}</td>
                     <td>{{$item->pekerjaan}}</td>
                         <td>
-                            <a href="#" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
+                            <a href="/masyarakat/edit/{{$item->id}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
                             <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>

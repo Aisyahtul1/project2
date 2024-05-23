@@ -24,3 +24,5 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/masyarakat/', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/masyarakat/form/', [App\Http\Controllers\HomeController::class, 'create']);
 Route::get('/masyarakat/store/', [App\Http\Controllers\HomeController::class, 'store']);
+Route::get('/masyarakat/edit/{id}', [MasyarakatController::class, 'edit']);
+Route::put('/masyarakat/{id}', [MasyarakatController::class, 'update']);

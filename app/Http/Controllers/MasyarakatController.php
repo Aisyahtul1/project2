@@ -56,7 +56,9 @@ class MasyarakatController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $mas = Masyarakat::find($id);
+        return view('masyarakat.edit',compact('mas'));
+
     }
 
     /**
@@ -64,7 +66,15 @@ class MasyarakatController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $mas = Masyarakat::find($id);
+        $mas->nik = $request->nik;
+        $mas->nama = $request->nama;
+        $mas->jenis_kelamin = $request->jenis_kelamin;
+        $mas->pekerjaan = $request->pekerjaan;
+        $mas->save();
+
+        return redirect ('/masyarakat/');
+
     }
 
     /**
