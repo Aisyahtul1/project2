@@ -41,12 +41,13 @@
 
                 </thead>
                 <tbody>
+                    @forelse ($mas as $item)
                     <tr>
-                        <td>1</td>
-                        <td>212334</td>
-                        <td>Nana</td>
-                        <td>Perempuan</td>
-                        <td>pns</td>
+                    <td>{{$nomor++}}</td>
+                    <td>{{$item->nik}}</td>
+                    <td>{{$item->nama}}</td>
+                    <td>{{$item->jenis_kelamin}}</td>
+                    <td>{{$item->pekerjaan}}</td>
                         <td>
                             <a href="#" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
                             <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
@@ -55,7 +56,10 @@
 
 
 
+                    @empty
 
 
-
-@endsection
+                  @endsection
+                </tbody>
+</table>
+</div>

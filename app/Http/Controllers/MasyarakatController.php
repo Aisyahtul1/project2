@@ -13,7 +13,10 @@ class MasyarakatController extends Controller
      */
     public function index()
     {
-        return view('masyarakat.index');
+        $nomor = 1;
+        $mas = Masyarakat::all(); //eloquent ORM
+        return view('masyarakat.index',compact('nomor','mas'));
+
     }
 
     /**
